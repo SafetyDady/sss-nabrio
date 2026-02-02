@@ -69,7 +69,7 @@ export default function Reva() {
             e.currentTarget.style.display = 'none';
           }}
         >
-          <source src="/assets/ai-detection-boxes.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/da1zloxbg/video/upload/factory-dolly-shot_zewyzd.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 vignette-overlay" />
         <div className="absolute inset-0 bg-[rgba(7,10,18,0.6)]" />
