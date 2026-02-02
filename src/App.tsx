@@ -24,10 +24,18 @@ function App() {
     ScrollTrigger.defaults({
       toggleActions: 'play none none none',
     });
+    
+    // Refresh ScrollTrigger on resize
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div className="relative bg-[#070A12] min-h-screen">
+    <div className="relative bg-[#070A12] min-h-screen overflow-x-hidden">
       {/* Noise overlay */}
       <div className="fixed inset-0 pointer-events-none z-[100] noise-overlay" />
       
@@ -35,7 +43,7 @@ function App() {
       <Navigation />
       
       {/* Main Content - All sections centered */}
-      <main className="relative max-w-[680px] lg:max-w-[900px] xl:max-w-7xl mx-auto">
+      <main className="relative w-full mx-auto">
         <Hero />
         <Problem />
         <Solution />
