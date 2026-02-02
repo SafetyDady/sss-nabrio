@@ -59,15 +59,19 @@ export default function Nara() {
       ref={sectionRef}
       className="relative w-full py-20 lg:py-32 z-50"
     >
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src="/images/nara_corridor_bg.jpg"
-          alt="Industrial corridor"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/assets/robot-arm-picking.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 vignette-overlay" />
-        <div className="absolute inset-0 bg-[rgba(7,10,18,0.7)]" />
+        <div className="absolute inset-0 bg-[rgba(7,10,18,0.6)]" />
       </div>
 
       {/* Content */}

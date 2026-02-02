@@ -59,13 +59,17 @@ export default function Hero() {
       ref={sectionRef}
       className="relative w-full min-h-screen overflow-hidden z-10"
     >
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src="/images/hero_factory_bg.jpg"
-          alt="Factory floor"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/assets/factory-dolly-shot.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 vignette-overlay" />
       </div>
 
@@ -76,11 +80,11 @@ export default function Hero() {
           {/* Partner Badge */}
           <div 
             ref={partnerRef}
-            className="inline-flex items-center gap-2 px-3 py-2 bg-[rgba(79,109,255,0.15)] rounded-xl border border-[rgba(79,109,255,0.3)] mb-6"
+            className="inline-flex items-center gap-2 px-4 py-3 bg-[rgba(79,109,255,0.15)] rounded-xl border border-[rgba(79,109,255,0.3)] mb-6"
             style={{ opacity: 0 }}
           >
-            <span className="text-xs sm:text-sm text-[#A7B1D8]">
-              by <span className="text-[#F4F6FF] font-medium">SSS Intelligence & Solutions</span>
+            <span className="text-lg sm:text-xl lg:text-2xl text-[#A7B1D8]">
+              by <span className="text-[#F4F6FF] font-semibold">SSS Intelligence & Solutions</span>
             </span>
           </div>
 
@@ -103,23 +107,7 @@ export default function Hero() {
             Train vision models, deploy to the edge, and automate decisions with an integrated AIoT platform.
           </p>
 
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" style={{ opacity: 0 }}>
-            <Button
-              size="lg"
-              className="bg-[#4F6DFF] hover:bg-[#3d5ce6] text-white px-8 py-6 text-base font-medium rounded-xl transition-all hover:-translate-y-0.5 w-full sm:w-auto"
-            >
-              Request a demo
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[rgba(167,177,216,0.3)] text-[#F4F6FF] hover:bg-[rgba(167,177,216,0.1)] px-8 py-6 text-base font-medium rounded-xl transition-all w-full sm:w-auto"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              View use cases
-            </Button>
-          </div>
+          <div ref={ctaRef} style={{ opacity: 0 }}></div>
         </div>
 
         {/* Right Card - Desktop only */}

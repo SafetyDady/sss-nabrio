@@ -60,8 +60,8 @@ export default function Solution() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/images/solution_industrial_bg.jpg"
-          alt="Industrial workspace"
+          src="/assets/factory-production-line.png"
+          alt="Factory production line"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 vignette-overlay" />

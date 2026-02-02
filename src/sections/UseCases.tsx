@@ -109,9 +109,9 @@ export default function UseCases() {
                 <img
                   src={useCase.image}
                   alt={useCase.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover brightness-125"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(7,10,18,0.95)] via-[rgba(7,10,18,0.7)] to-[rgba(7,10,18,0.4)] lg:bg-gradient-to-r lg:from-[rgba(7,10,18,0.9)] lg:via-[rgba(7,10,18,0.6)] lg:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(7,10,18,0.85)] via-[rgba(7,10,18,0.5)] to-[rgba(7,10,18,0.2)] lg:bg-gradient-to-r lg:from-[rgba(7,10,18,0.8)] lg:via-[rgba(7,10,18,0.4)] lg:to-transparent" />
               </div>
 
               {/* Content */}

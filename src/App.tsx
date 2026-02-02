@@ -11,7 +11,6 @@ import Nara from './sections/Nara';
 import Connectivity from './sections/Connectivity';
 import UseCases from './sections/UseCases';
 import Testimonials from './sections/Testimonials';
-import Partner from './sections/Partner';
 import CTA from './sections/CTA';
 import Contact from './sections/Contact';
 
@@ -49,7 +48,6 @@ function App() {
           <UseCases />
         </div>
         <Testimonials />
-        <Partner />
         <CTA />
         <div id="contact">
           <Contact />
