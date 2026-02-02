@@ -86,10 +86,10 @@ export default function Problem() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline Block */}
         <div ref={headlineRef} className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-6">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-6">
             Most teams never ship.
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
+          <p className="text-base sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
             Physical AI projects get stuck between notebooks, cloud bills, and hardware that won't integrate.
           </p>
         </div>
@@ -107,10 +107,10 @@ export default function Problem() {
                 <div className="w-7 h-7 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-2">
                   <point.icon className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
-                <h3 className="text-sm font-semibold text-[#F4F6FF] mb-1">
+                <h3 className="text-base font-semibold text-[#F4F6FF] mb-1">
                   {point.title}
                 </h3>
-                <p className="text-xs text-[#A7B1D8] leading-relaxed">
+                <p className="text-sm text-[#A7B1D8] leading-relaxed">
                   {point.description}
                 </p>
               </div>

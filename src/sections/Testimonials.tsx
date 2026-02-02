@@ -73,10 +73,10 @@ export default function Testimonials() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline */}
         <div ref={headlineRef} className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
             Built for teams who ship.
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-[#A7B1D8]">
+          <p className="text-base sm:text-base md:text-lg text-[#A7B1D8]">
             See what our customers have to say.
           </p>
         </div>
@@ -95,15 +95,15 @@ export default function Testimonials() {
                   <Quote className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
 
-                <blockquote className="text-sm text-[#F4F6FF] leading-relaxed mb-3">
+                <blockquote className="text-base text-[#F4F6FF] leading-relaxed mb-3">
                   "{testimonial.quote}"
                 </blockquote>
 
                 <div className="pt-3 border-t border-[rgba(167,177,216,0.1)]">
-                  <p className="text-xs font-medium text-[#F4F6FF]">
+                  <p className="text-sm font-medium text-[#F4F6FF]">
                     {testimonial.attribution}
                   </p>
-                  <p className="text-[11px] text-[#A7B1D8]">
+                  <p className="text-xs text-[#A7B1D8]">
                     {testimonial.company}
                   </p>
                 </div>
