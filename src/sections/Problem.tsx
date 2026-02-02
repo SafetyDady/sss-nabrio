@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Puzzle, Clock, TrendingUp } from 'lucide-react';
+import { useIsMobile } from '@/hooks/useMediaQuery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,7 @@ const painPoints = [
 ];
 
 export default function Problem() {
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -92,26 +94,50 @@ export default function Problem() {
           </p>
         </div>
 
-        {/* Pain Point Cards - Compact on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {painPoints.map((point, i) => (
-            <div
-              key={point.title}
-              ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-5 md:p-6 hover:border-[rgba(79,109,255,0.4)] transition-colors"
-            >
-              <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-4">
-                <point.icon className="w-5 h-5 md:w-6 md:h-6 text-[#4F6DFF]" />
+        {/* Pain Point Cards - Separate Layout for Mobile/Desktop */}
+        {isMobile ? (
+          // Mobile Layout: Vertical Stack
+          <div className="space-y-4">
+            {painPoints.map((point, i) => (
+              <div
+                key={point.title}
+                ref={el => { cardsRef.current[i] = el; }}
+                className="glass-card p-4 hover:border-[rgba(79,109,255,0.4)] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3">
+                  <point.icon className="w-5 h-5 text-[#4F6DFF]" />
+                </div>
+                <h3 className="text-base font-semibold text-[#F4F6FF] mb-2">
+                  {point.title}
+                </h3>
+                <p className="text-sm text-[#A7B1D8] leading-relaxed">
+                  {point.description}
+                </p>
               </div>
-              <h3 className="text-base md:text-lg lg:text-xl font-semibold text-[#F4F6FF] mb-2 md:mb-3">
-                {point.title}
-              </h3>
-              <p className="text-sm md:text-base text-[#A7B1D8] leading-relaxed">
-                {point.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          // Desktop Layout: 3 Column Grid
+          <div className="grid grid-cols-3 gap-6">
+            {painPoints.map((point, i) => (
+              <div
+                key={point.title}
+                ref={el => { cardsRef.current[i] = el; }}
+                className="glass-card p-6 hover:border-[rgba(79,109,255,0.4)] transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-4">
+                  <point.icon className="w-6 h-6 text-[#4F6DFF]" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-semibold text-[#F4F6FF] mb-3">
+                  {point.title}
+                </h3>
+                <p className="text-base text-[#A7B1D8] leading-relaxed">
+                  {point.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

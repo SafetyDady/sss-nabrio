@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Database, Brain, Rocket, Activity } from 'lucide-react';
+import { useIsMobile } from '@/hooks/useMediaQuery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,7 @@ const flowSteps = [
 ];
 
 export default function Solution() {
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -80,26 +82,50 @@ export default function Solution() {
           </p>
         </div>
 
-        {/* Flow Steps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {flowSteps.map((step, i) => (
-            <div
-              key={step.label}
-              ref={el => { stepsRef.current[i] = el; }}
-              className="glass-card p-5 md:p-6 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
-            >
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-3 md:mb-4">
-                <step.icon className="w-5 h-5 md:w-6 md:h-6 text-[#4F6DFF]" />
+        {/* Flow Steps - Separate Layout for Mobile/Desktop */}
+        {isMobile ? (
+          // Mobile Layout: Vertical Stack
+          <div className="space-y-4">
+            {flowSteps.map((step, i) => (
+              <div
+                key={step.label}
+                ref={el => { stepsRef.current[i] = el; }}
+                className="glass-card p-4 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-3">
+                  <step.icon className="w-5 h-5 text-[#4F6DFF]" />
+                </div>
+                <h3 className="text-base font-semibold text-[#F4F6FF] mb-2">
+                  {step.label}
+                </h3>
+                <p className="text-sm text-[#A7B1D8]">
+                  {step.description}
+                </p>
               </div>
-              <h3 className="text-base md:text-lg font-semibold text-[#F4F6FF] mb-2 md:mb-3">
-                {step.label}
-              </h3>
-              <p className="text-sm text-[#A7B1D8] leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          // Desktop Layout: 4 Column Grid
+          <div className="grid grid-cols-4 gap-6">
+            {flowSteps.map((step, i) => (
+              <div
+                key={step.label}
+                ref={el => { stepsRef.current[i] = el; }}
+                className="glass-card p-6 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
+              >
+                <div className="w-14 h-14 rounded-xl bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-[#4F6DFF]" />
+                </div>
+                <h3 className="text-lg font-semibold text-[#F4F6FF] mb-2">
+                  {step.label}
+                </h3>
+                <p className="text-sm text-[#A7B1D8]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

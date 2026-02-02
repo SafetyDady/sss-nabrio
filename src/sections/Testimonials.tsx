@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote } from 'lucide-react';
+import { useIsMobile } from '@/hooks/useMediaQuery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -79,33 +81,64 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonial Cards - Horizontal scroll on mobile */}
-        <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
-          {testimonials.map((testimonial, i) => (
-            <div
-              key={i}
-              ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-4 md:p-5 lg:p-6 hover:border-[rgba(79,109,255,0.3)] transition-colors flex-shrink-0 w-[calc(100vw-3rem)] sm:w-[320px] md:w-auto snap-center"
-            >
-              <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-4">
-                <Quote className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
-              </div>
+        {/* Testimonial Cards - Separate Layout for Mobile/Desktop */}
+        {isMobile ? (
+          // Mobile Layout: Vertical Stack
+          <div className="space-y-4 mb-12">
+            {testimonials.map((testimonial, i) => (
+              <div
+                key={i}
+                ref={el => { cardsRef.current[i] = el; }}
+                className="glass-card p-4 hover:border-[rgba(79,109,255,0.3)] transition-colors"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3">
+                  <Quote className="w-4 h-4 text-[#4F6DFF]" />
+                </div>
 
-              <blockquote className="text-sm md:text-base text-[#F4F6FF] leading-relaxed mb-4 md:mb-5 flex-grow">
-                "{testimonial.quote}"
-              </blockquote>
+                <blockquote className="text-sm text-[#F4F6FF] leading-relaxed mb-4">
+                  "{testimonial.quote}"
+                </blockquote>
 
-              <div className="pt-3 md:pt-4 border-t border-[rgba(167,177,216,0.1)]">
-                <p className="text-xs md:text-sm font-medium text-[#F4F6FF]">
-                  {testimonial.attribution}
-                </p>
-                <p className="text-[10px] md:text-xs text-[#A7B1D8]">
-                  {testimonial.company}
-                </p>
+                <div className="pt-3 border-t border-[rgba(167,177,216,0.1)]">
+                  <p className="text-xs font-medium text-[#F4F6FF]">
+                    {testimonial.attribution}
+                  </p>
+                  <p className="text-[10px] text-[#A7B1D8]">
+                    {testimonial.company}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          // Desktop Layout: 3 Column Grid
+          <div className="grid grid-cols-3 gap-6 mb-12">
+            {testimonials.map((testimonial, i) => (
+              <div
+                key={i}
+                ref={el => { cardsRef.current[i] = el; }}
+                className="glass-card p-6 lg:p-8 hover:border-[rgba(79,109,255,0.3)] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-6">
+                  <Quote className="w-5 h-5 text-[#4F6DFF]" />
+                </div>
+
+                <blockquote className="text-base lg:text-lg text-[#F4F6FF] leading-relaxed mb-6">
+                  "{testimonial.quote}"
+                </blockquote>
+
+                <div className="pt-6 border-t border-[rgba(167,177,216,0.1)]">
+                  <p className="text-sm font-medium text-[#F4F6FF]">
+                    {testimonial.attribution}
+                  </p>
+                  <p className="text-xs text-[#A7B1D8]">
+                    {testimonial.company}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Trust badges */}
         <div className="mt-12 md:mt-16 flex flex-wrap justify-center items-center gap-6 md:gap-8 opacity-60">
