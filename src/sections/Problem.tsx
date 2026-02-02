@@ -69,7 +69,7 @@ export default function Problem() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-16 md:py-24 lg:py-32 z-20"
+      className="relative w-full py-8 md:py-24 lg:py-32 z-20"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
@@ -85,32 +85,32 @@ export default function Problem() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline Block */}
-        <div ref={headlineRef} className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4 md:mb-6">
+        <div ref={headlineRef} className="text-center mb-6 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-2 md:mb-6">
             Most teams never ship.
           </h2>
-          <p className="text-base sm:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
             Physical AI projects get stuck between notebooks, cloud bills, and hardware that won't integrate.
           </p>
         </div>
 
         {/* Pain Point Cards - Separate Layout for Mobile/Desktop */}
         {isMobile ? (
-          // Mobile Layout: Vertical Stack
-          <div className="space-y-3">
+          // Mobile Layout: Vertical Stack - Compact
+          <div className="space-y-2">
             {painPoints.map((point, i) => (
               <div
                 key={point.title}
                 ref={el => { cardsRef.current[i] = el; }}
-                className="glass-card p-3 hover:border-[rgba(79,109,255,0.4)] transition-colors"
+                className="glass-card p-2.5 hover:border-[rgba(79,109,255,0.4)] transition-colors"
               >
-                <div className="w-8 h-8 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-2">
-                  <point.icon className="w-4 h-4 text-[#4F6DFF]" />
+                <div className="w-6 h-6 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-1.5">
+                  <point.icon className="w-3 h-3 text-[#4F6DFF]" />
                 </div>
-                <h3 className="text-sm font-semibold text-[#F4F6FF] mb-1">
+                <h3 className="text-xs font-semibold text-[#F4F6FF] mb-0.5">
                   {point.title}
                 </h3>
-                <p className="text-xs text-[#A7B1D8] leading-relaxed">
+                <p className="text-[10px] text-[#A7B1D8] leading-tight">
                   {point.description}
                 </p>
               </div>
