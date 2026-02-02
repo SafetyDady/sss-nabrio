@@ -109,44 +109,44 @@ export default function Reva() {
 
           {/* Right Card */}
           <div ref={cardRef}>
-            <div className="glass-card p-6">
+            <div className="glass-card p-4 sm:p-6">
               {/* Card Header */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center">
-                    <Tag className="w-5 h-5 text-[#4F6DFF]" />
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center">
+                    <Tag className="w-4 h-4 sm:w-5 sm:h-5 text-[#4F6DFF]" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-[#F4F6FF]">Dataset</h3>
-                    <p className="text-xs text-[#A7B1D8]">Production v3</p>
+                    <h3 className="text-xs sm:text-sm font-semibold text-[#F4F6FF]">Dataset</h3>
+                    <p className="text-[10px] sm:text-xs text-[#A7B1D8]">Production v3</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#A7B1D8]">
-                  <Layers className="w-4 h-4" />
+                <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-xs text-[#A7B1D8]">
+                  <Layers className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span>1,247 images</span>
                 </div>
               </div>
 
               {/* Thumbnail Grid */}
-              <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                 {datasetImages.map((img) => (
                   <div
                     key={img.id}
-                    className="relative rounded-xl overflow-hidden bg-[#0B1022] aspect-video"
+                    className="relative rounded-lg sm:rounded-xl overflow-hidden bg-[#0B1022] aspect-video"
                   >
                     <img
                       src="/images/usecase_qc_bg.jpg"
                       alt={`Dataset ${img.id}`}
                       className="w-full h-full object-cover opacity-60"
                     />
-                    <div className="absolute top-2 left-2">
+                    <div className="absolute top-1 left-1 sm:top-2 sm:left-2">
                       {img.labeled ? (
-                        <span className="px-2 py-0.5 text-[10px] font-medium text-green-400 bg-[rgba(34,197,94,0.15)] rounded">
-                          <Check className="w-3 h-3 inline mr-1" />
+                        <span className="px-1.5 py-0.5 sm:px-2 text-[9px] sm:text-[10px] font-medium text-green-400 bg-[rgba(34,197,94,0.15)] rounded">
+                          <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 inline mr-0.5 sm:mr-1" />
                           Labeled
                         </span>
                       ) : (
-                        <span className="px-2 py-0.5 text-[10px] font-medium text-amber-400 bg-[rgba(245,158,11,0.15)] rounded">
+                        <span className="px-1.5 py-0.5 sm:px-2 text-[9px] sm:text-[10px] font-medium text-amber-400 bg-[rgba(245,158,11,0.15)] rounded">
                           Pending
                         </span>
                       )}
@@ -156,14 +156,16 @@ export default function Reva() {
               </div>
 
               {/* Action Bar */}
-              <div className="flex items-center justify-between pt-4 border-t border-[rgba(167,177,216,0.1)]">
-                <div className="flex items-center gap-2 text-xs text-[#A7B1D8]">
-                  <Download className="w-4 h-4" />
-                  <span>ONNX, TensorRT, CoreML</span>
+              <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-[rgba(167,177,216,0.1)]">
+                <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-xs text-[#A7B1D8]">
+                  <Download className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">ONNX, TensorRT, CoreML</span>
+                  <span className="sm:hidden">Export</span>
                 </div>
-                <Button size="sm" className="bg-[#4F6DFF] hover:bg-[#3d5ce6] text-white text-sm px-4 py-2 rounded-lg">
-                  <Play className="w-4 h-4 mr-2" />
-                  Start training
+                <Button size="sm" className="bg-[#4F6DFF] hover:bg-[#3d5ce6] text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg">
+                  <Play className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">Start training</span>
+                  <span className="sm:hidden">Train</span>
                 </Button>
               </div>
             </div>

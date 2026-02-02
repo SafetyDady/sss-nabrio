@@ -164,7 +164,7 @@ export default function Contact() {
 
           {/* Right Column - Form */}
           <div ref={formRef}>
-            <div className="glass-card p-6 lg:p-8">
+            <div className="glass-card p-4 sm:p-6 lg:p-8">
               {submitted ? (
                 <div className="text-center py-10">
                   <div className="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
@@ -178,8 +178,8 @@ export default function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-sm text-[#A7B1D8]">Name</Label>
                       <Input

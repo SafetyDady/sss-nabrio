@@ -115,27 +115,27 @@ export default function UseCases() {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-end lg:justify-center p-6 lg:p-12 lg:max-w-[50%]">
-                <div className="w-12 h-12 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-[#4F6DFF]" />
+              <div className="relative z-10 h-full flex flex-col justify-end lg:justify-center p-4 sm:p-6 lg:p-12 lg:max-w-[50%]">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 sm:mb-4">
+                  <useCase.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#4F6DFF]" />
                 </div>
                 
-                <h3 className="text-2xl lg:text-3xl font-bold text-[#F4F6FF] mb-3">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#F4F6FF] mb-2 sm:mb-3">
                   {useCase.title}
                 </h3>
                 
-                <p className="text-base lg:text-lg text-[#A7B1D8] leading-relaxed mb-6">
+                <p className="text-sm sm:text-base lg:text-lg text-[#A7B1D8] leading-relaxed mb-4 sm:mb-6">
                   {useCase.description}
                 </p>
 
                 {/* Stats */}
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap gap-4 sm:gap-6">
                   {useCase.stats.map((stat) => (
                     <div key={stat.label}>
-                      <div className="text-xl lg:text-2xl font-bold text-[#4F6DFF]">
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#4F6DFF]">
                         {stat.value}
                       </div>
-                      <div className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em]">
+                      <div className="text-[10px] sm:text-xs text-[#A7B1D8] uppercase tracking-[0.14em]">
                         {stat.label}
                       </div>
                     </div>
