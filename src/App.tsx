@@ -34,8 +34,8 @@ function App() {
       {/* Navigation */}
       <Navigation />
       
-      {/* Main Content */}
-      <main className="relative">
+      {/* Main Content - All sections centered */}
+      <main className="relative max-w-[680px] lg:max-w-[900px] xl:max-w-7xl mx-auto">
         <Hero />
         <Problem />
         <Solution />
