@@ -85,11 +85,11 @@ export default function Problem() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline Block */}
-        <div ref={headlineRef} className="text-center mb-6 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-2 md:mb-6">
+        <div ref={headlineRef} className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-6">
             Most teams never ship.
           </h2>
-          <p className="text-xs sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
             Physical AI projects get stuck between notebooks, cloud bills, and hardware that won't integrate.
           </p>
         </div>
@@ -97,20 +97,20 @@ export default function Problem() {
         {/* Pain Point Cards - Separate Layout for Mobile/Desktop */}
         {isMobile ? (
           // Mobile Layout: Vertical Stack - Compact
-          <div className="space-y-2">
+          <div className="space-y-3">
             {painPoints.map((point, i) => (
               <div
                 key={point.title}
                 ref={el => { cardsRef.current[i] = el; }}
-                className="glass-card p-2.5 hover:border-[rgba(79,109,255,0.4)] transition-colors"
+                className="glass-card p-3 hover:border-[rgba(79,109,255,0.4)] transition-colors"
               >
-                <div className="w-6 h-6 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-1.5">
-                  <point.icon className="w-3 h-3 text-[#4F6DFF]" />
+                <div className="w-7 h-7 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-2">
+                  <point.icon className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
-                <h3 className="text-xs font-semibold text-[#F4F6FF] mb-0.5">
+                <h3 className="text-sm font-semibold text-[#F4F6FF] mb-1">
                   {point.title}
                 </h3>
-                <p className="text-[10px] text-[#A7B1D8] leading-tight">
+                <p className="text-xs text-[#A7B1D8] leading-relaxed">
                   {point.description}
                 </p>
               </div>

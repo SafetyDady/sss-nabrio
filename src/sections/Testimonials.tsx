@@ -73,10 +73,10 @@ export default function Testimonials() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline */}
         <div ref={headlineRef} className="text-center mb-8 md:mb-12">
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-2 md:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
             Built for teams who ship.
           </h2>
-          <p className="text-xs sm:text-base md:text-lg text-[#A7B1D8]">
+          <p className="text-sm sm:text-base md:text-lg text-[#A7B1D8]">
             See what our customers have to say.
           </p>
         </div>
@@ -84,26 +84,26 @@ export default function Testimonials() {
         {/* Testimonial Cards - Separate Layout for Mobile/Desktop */}
         {isMobile ? (
           // Mobile Layout: Vertical Stack
-          <div className="space-y-3 mb-8">
+          <div className="space-y-4 mb-8">
             {testimonials.map((testimonial, i) => (
               <div
                 key={i}
                 ref={el => { cardsRef.current[i] = el; }}
-                className="glass-card p-3 hover:border-[rgba(79,109,255,0.3)] transition-colors"
+                className="glass-card p-4 hover:border-[rgba(79,109,255,0.3)] transition-colors"
               >
-                <div className="w-6 h-6 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-2">
-                  <Quote className="w-3 h-3 text-[#4F6DFF]" />
+                <div className="w-7 h-7 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3">
+                  <Quote className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
 
-                <blockquote className="text-xs text-[#F4F6FF] leading-relaxed mb-2">
+                <blockquote className="text-sm text-[#F4F6FF] leading-relaxed mb-3">
                   "{testimonial.quote}"
                 </blockquote>
 
-                <div className="pt-2 border-t border-[rgba(167,177,216,0.1)]">
-                  <p className="text-[10px] font-medium text-[#F4F6FF]">
+                <div className="pt-3 border-t border-[rgba(167,177,216,0.1)]">
+                  <p className="text-xs font-medium text-[#F4F6FF]">
                     {testimonial.attribution}
                   </p>
-                  <p className="text-[9px] text-[#A7B1D8]">
+                  <p className="text-[11px] text-[#A7B1D8]">
                     {testimonial.company}
                   </p>
                 </div>
