@@ -85,21 +85,21 @@ export default function Testimonials() {
             <div
               key={i}
               ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-6 lg:p-8 hover:border-[rgba(79,109,255,0.3)] transition-colors"
+              className="glass-card p-4 sm:p-6 lg:p-8 hover:border-[rgba(79,109,255,0.3)] transition-colors"
             >
-              <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-6">
-                <Quote className="w-5 h-5 text-[#4F6DFF]" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-4 sm:mb-6">
+                <Quote className="w-4 h-4 sm:w-5 sm:h-5 text-[#4F6DFF]" />
               </div>
 
-              <blockquote className="text-base lg:text-lg text-[#F4F6FF] leading-relaxed mb-6">
+              <blockquote className="text-sm sm:text-base lg:text-lg text-[#F4F6FF] leading-relaxed mb-4 sm:mb-6">
                 "{testimonial.quote}"
               </blockquote>
 
-              <div className="pt-6 border-t border-[rgba(167,177,216,0.1)]">
-                <p className="text-sm font-medium text-[#F4F6FF]">
+              <div className="pt-4 sm:pt-6 border-t border-[rgba(167,177,216,0.1)]">
+                <p className="text-xs sm:text-sm font-medium text-[#F4F6FF]">
                   {testimonial.attribution}
                 </p>
-                <p className="text-xs text-[#A7B1D8]">
+                <p className="text-[10px] sm:text-xs text-[#A7B1D8]">
                   {testimonial.company}
                 </p>
               </div>
