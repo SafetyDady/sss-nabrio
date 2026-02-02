@@ -72,7 +72,7 @@ export default function Hero() {
             e.currentTarget.style.display = 'none';
           }}
         >
-          <source src="/assets/factory-dolly-shot.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/da1zloxbg/video/upload/factory-dolly-shot_zewyzd.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 vignette-overlay" />
       </div>
