@@ -64,12 +64,8 @@ export default function Reva() {
           loop
           playsInline
           className="w-full h-full object-cover"
-          onError={(e) => {
-            // Hide video and show fallback background
-            e.currentTarget.style.display = 'none';
-          }}
         >
-          <source src="https://res.cloudinary.com/da1zloxbg/video/upload/factory-dolly-shot_zewyzd.mp4" type="video/mp4" />
+          <source src="/assets/ai-detection-boxes.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 vignette-overlay" />
         <div className="absolute inset-0 bg-[rgba(7,10,18,0.6)]" />
