@@ -86,7 +86,7 @@ export default function Solution() {
             <div
               key={step.label}
               ref={el => { stepsRef.current[i] = el; }}
-              className="glass-card p-5 md:p-6 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors min-h-[240px] md:min-h-auto flex flex-col justify-start"
+              className="glass-card p-5 md:p-6 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
             >
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-3 md:mb-4">
                 <step.icon className="w-5 h-5 md:w-6 md:h-6 text-[#4F6DFF]" />

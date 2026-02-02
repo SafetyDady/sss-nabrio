@@ -98,7 +98,7 @@ export default function Problem() {
             <div
               key={point.title}
               ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-5 md:p-6 hover:border-[rgba(79,109,255,0.4)] transition-colors min-h-[220px] md:min-h-auto flex flex-col justify-start"
+              className="glass-card p-5 md:p-6 hover:border-[rgba(79,109,255,0.4)] transition-colors"
             >
               <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-4">
                 <point.icon className="w-5 h-5 md:w-6 md:h-6 text-[#4F6DFF]" />

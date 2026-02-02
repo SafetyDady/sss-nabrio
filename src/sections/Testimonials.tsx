@@ -85,7 +85,7 @@ export default function Testimonials() {
             <div
               key={i}
               ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-4 md:p-5 lg:p-6 hover:border-[rgba(79,109,255,0.3)] transition-colors flex-shrink-0 w-[calc(100vw-3rem)] sm:w-[320px] md:w-auto snap-center min-h-[280px] md:min-h-auto flex flex-col justify-between"
+              className="glass-card p-4 md:p-5 lg:p-6 hover:border-[rgba(79,109,255,0.3)] transition-colors flex-shrink-0 w-[calc(100vw-3rem)] sm:w-[320px] md:w-auto snap-center"
             >
               <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-4">
                 <Quote className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
