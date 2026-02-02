@@ -54,7 +54,7 @@ export default function Reva() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 z-40"
+      className="relative w-full py-16 md:py-24 lg:py-32 z-40"
     >
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
@@ -72,8 +72,8 @@ export default function Reva() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
           {/* Left Content */}
           <div ref={contentRef}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(79,109,255,0.15)] rounded-full border border-[rgba(79,109,255,0.3)] mb-6">
@@ -83,11 +83,11 @@ export default function Reva() {
               </span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4 md:mb-6">
               Reva — Train models without the boilerplate.
             </h2>
             
-            <p className="text-lg text-[#A7B1D8] leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-[#A7B1D8] leading-relaxed mb-6 md:mb-8">
               Smart annotation, augmentation, and version control—so you go from raw data to a validated model in days, not months.
             </p>
 
@@ -105,7 +105,7 @@ export default function Reva() {
 
           {/* Right Card */}
           <div ref={cardRef}>
-            <div className="glass-card p-4 sm:p-6">
+            <div className="glass-card p-4 sm:p-5 md:p-6">
               {/* Card Header */}
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center gap-2 sm:gap-3">

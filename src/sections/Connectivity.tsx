@@ -72,7 +72,7 @@ export default function Connectivity() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 z-[60] bg-[#070A12]"
+      className="relative w-full py-16 md:py-24 lg:py-32 z-[60] bg-[#070A12]"
     >
       {/* Subtle grid background */}
       <div className="absolute inset-0 opacity-5">
@@ -86,30 +86,30 @@ export default function Connectivity() {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Headline */}
-        <div ref={headlineRef} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4">
+        <div ref={headlineRef} className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
             Connect what you already use.
           </h2>
-          <p className="text-lg text-[#A7B1D8] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
             Nara speaks industrial protocols and modern APIs—so you don't need to rebuild your stack.
           </p>
         </div>
 
         {/* Devices */}
-        <div ref={devicesRef} className="mb-10">
-          <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-4 text-center">
+        <div ref={devicesRef} className="mb-8 md:mb-10">
+          <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-3 md:mb-4 text-center">
             Devices
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {devices.map((device) => (
               <div
                 key={device.label}
-                className="flex items-center gap-2 px-4 py-3 glass-card hover:bg-[rgba(79,109,255,0.1)] transition-colors"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 md:py-3 glass-card hover:bg-[rgba(79,109,255,0.1)] transition-colors"
               >
-                <device.icon className="w-5 h-5 text-[#4F6DFF]" />
-                <span className="text-sm font-medium text-[#F4F6FF]">{device.label}</span>
+                <device.icon className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
+                <span className="text-xs md:text-sm font-medium text-[#F4F6FF]">{device.label}</span>
               </div>
             ))}
           </div>
@@ -117,17 +117,17 @@ export default function Connectivity() {
 
         {/* Protocols */}
         <div ref={protocolsRef}>
-          <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-4 text-center">
+          <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-3 md:mb-4 text-center">
             Protocols & Services
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {protocols.map((protocol) => (
               <div
                 key={protocol.label}
-                className="flex items-center gap-2 px-4 py-3 glass-card hover:bg-[rgba(79,109,255,0.1)] transition-colors"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 md:py-3 glass-card hover:bg-[rgba(79,109,255,0.1)] transition-colors"
               >
-                <protocol.icon className="w-5 h-5 text-[#7B8FFF]" />
-                <span className="text-sm font-medium text-[#F4F6FF]">{protocol.label}</span>
+                <protocol.icon className="w-4 h-4 md:w-5 md:h-5 text-[#7B8FFF]" />
+                <span className="text-xs md:text-sm font-medium text-[#F4F6FF]">{protocol.label}</span>
               </div>
             ))}
           </div>

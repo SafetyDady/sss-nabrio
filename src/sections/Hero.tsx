@@ -74,23 +74,23 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-start px-6 py-24 lg:py-0">
+      <div className="relative z-10 w-full min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-start px-4 sm:px-6 py-16 sm:py-20 lg:py-0">
         {/* Left Content */}
-        <div className="w-full lg:w-[50%] lg:pl-[7vw] text-center lg:text-left mb-10 lg:mb-0">
+        <div className="w-full lg:w-[50%] lg:pl-[7vw] text-center lg:text-left mb-8 sm:mb-10 lg:mb-0">
           {/* Partner Badge */}
           <div 
             ref={partnerRef}
-            className="inline-flex items-center gap-2 px-4 py-3 bg-[rgba(79,109,255,0.15)] rounded-xl border border-[rgba(79,109,255,0.3)] mb-6"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 bg-[rgba(79,109,255,0.15)] rounded-xl border border-[rgba(79,109,255,0.3)] mb-4 sm:mb-6"
             style={{ opacity: 0 }}
           >
-            <span className="text-lg sm:text-xl lg:text-2xl text-[#A7B1D8]">
+            <span className="text-xs sm:text-sm md:text-lg lg:text-xl text-[#A7B1D8]">
               by <span className="text-[#F4F6FF] font-semibold">SSS Intelligence & Solutions</span>
             </span>
           </div>
 
           <h1
             ref={headlineRef}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#F4F6FF] mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#F4F6FF] mb-4 sm:mb-6"
           >
             {headlineWords.map((word, i) => (
               <span key={i} className="word inline-block mr-[0.25em]">
@@ -101,7 +101,7 @@ export default function Hero() {
 
           <p
             ref={subheadlineRef}
-            className="text-base sm:text-lg text-[#A7B1D8] leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8"
+            className="text-sm sm:text-base md:text-lg text-[#A7B1D8] leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8"
             style={{ opacity: 0 }}
           >
             Train vision models, deploy to the edge, and automate decisions with an integrated AIoT platform.

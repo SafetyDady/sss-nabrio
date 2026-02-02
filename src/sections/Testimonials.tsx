@@ -66,36 +66,36 @@ export default function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 z-[80] bg-[#070A12]"
+      className="relative w-full py-16 md:py-24 lg:py-32 z-[80] bg-[#070A12]"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline */}
-        <div ref={headlineRef} className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4">
+        <div ref={headlineRef} className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
             Built for teams who ship.
           </h2>
-          <p className="text-lg text-[#A7B1D8]">
+          <p className="text-base sm:text-lg text-[#A7B1D8]">
             See what our customers have to say.
           </p>
         </div>
 
         {/* Testimonial Cards - Horizontal scroll on mobile */}
-        <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
               ref={el => { cardsRef.current[i] = el; }}
-              className="glass-card p-4 md:p-6 lg:p-8 hover:border-[rgba(79,109,255,0.3)] transition-colors flex-shrink-0 w-[280px] md:w-auto snap-center"
+              className="glass-card p-4 md:p-5 lg:p-6 hover:border-[rgba(79,109,255,0.3)] transition-colors flex-shrink-0 w-[calc(100vw-3rem)] sm:w-[320px] md:w-auto snap-center min-h-[280px] md:min-h-auto flex flex-col justify-between"
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-6">
+              <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3 md:mb-4">
                 <Quote className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
               </div>
 
-              <blockquote className="text-sm md:text-base lg:text-lg text-[#F4F6FF] leading-relaxed mb-3 md:mb-6">
+              <blockquote className="text-sm md:text-base text-[#F4F6FF] leading-relaxed mb-4 md:mb-5 flex-grow">
                 "{testimonial.quote}"
               </blockquote>
 
-              <div className="pt-3 md:pt-6 border-t border-[rgba(167,177,216,0.1)]">
+              <div className="pt-3 md:pt-4 border-t border-[rgba(167,177,216,0.1)]">
                 <p className="text-xs md:text-sm font-medium text-[#F4F6FF]">
                   {testimonial.attribution}
                 </p>
@@ -108,7 +108,7 @@ export default function Testimonials() {
         </div>
 
         {/* Trust badges */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60">
+        <div className="mt-12 md:mt-16 flex flex-wrap justify-center items-center gap-6 md:gap-8 opacity-60">
           <div className="text-center">
             <div className="text-2xl lg:text-3xl font-bold text-[#F4F6FF]">50+</div>
             <div className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em]">Deployments</div>

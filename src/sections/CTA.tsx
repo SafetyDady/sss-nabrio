@@ -31,7 +31,7 @@ export default function CTA() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-24 lg:py-40 z-[90]"
+      className="relative w-full py-16 md:py-24 lg:py-40 z-[90]"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
@@ -45,18 +45,18 @@ export default function CTA() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <div ref={contentRef}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4 md:mb-6">
             Ready to automate what matters?
           </h2>
-          <p className="text-lg text-[#A7B1D8] max-w-2xl mx-auto mb-10">
+          <p className="text-base sm:text-lg text-[#A7B1D8] max-w-2xl mx-auto mb-6 md:mb-8">
             Get a demo tailored to your line, your devices, and your targets.
           </p>
 
           <Button
             size="lg"
-            className="bg-[#4F6DFF] hover:bg-[#3d5ce6] text-white px-10 py-7 text-lg font-medium rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-[rgba(79,109,255,0.3)]"
+            className="bg-[#4F6DFF] hover:bg-[#3d5ce6] text-white px-6 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 text-sm sm:text-base md:text-lg font-medium rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-[rgba(79,109,255,0.3)]"
           >
             Request a demo
             <ArrowRight className="ml-2 w-5 h-5" />

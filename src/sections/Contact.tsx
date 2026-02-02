@@ -66,65 +66,65 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative w-full py-20 lg:py-32 z-[100] bg-[#0B1022]"
+      className="relative w-full py-16 md:py-24 lg:py-32 z-[100] bg-[#0B1022]"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Company Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(79,109,255,0.15)] rounded-full border border-[rgba(79,109,255,0.3)] mb-4">
+        <div className="text-center mb-10 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(79,109,255,0.15)] rounded-full border border-[rgba(79,109,255,0.3)] mb-3 md:mb-4">
             <Building2 className="w-4 h-4 text-[#4F6DFF]" />
             <span className="text-xs font-medium uppercase tracking-[0.14em] text-[#4F6DFF]">
               Contact Us
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-2 md:mb-3">
             SSS Intelligence & Solutions Co., Ltd.
           </h2>
-          <p className="text-lg text-[#4F6DFF] font-medium">
+          <p className="text-base md:text-lg text-[#4F6DFF] font-medium">
             Authorized Partner of Nabrio in Thailand
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-16">
           {/* Left Column - Info */}
           <div ref={leftRef}>
-            <h3 className="text-xl lg:text-2xl font-bold text-[#F4F6FF] mb-4">
+            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-[#F4F6FF] mb-3 md:mb-4">
               Let's build your next automation.
             </h3>
-            <p className="text-base text-[#A7B1D8] leading-relaxed mb-8">
+            <p className="text-sm md:text-base text-[#A7B1D8] leading-relaxed mb-6 md:mb-8">
               Tell us what you're tracking, controlling, or inspecting. We'll reply within one business day.
             </p>
 
             {/* Contact Details */}
-            <div className="space-y-5 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[#4F6DFF]" />
+            <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
                 </div>
                 <div>
                   <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-1">Address</p>
-                  <p className="text-sm text-[#F4F6FF]">28/73 Sameddang Thap-ma, Rayong, Thailand</p>
+                  <p className="text-xs md:text-sm text-[#F4F6FF]">28/73 Sameddang Thap-ma, Rayong, Thailand</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#4F6DFF]" />
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
                 </div>
                 <div>
                   <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-1">Email</p>
                   <a 
                     href="mailto:sanchai5651@gmail.com" 
-                    className="text-sm text-[#F4F6FF] hover:text-[#4F6DFF] transition-colors"
+                    className="text-xs md:text-sm text-[#F4F6FF] hover:text-[#4F6DFF] transition-colors"
                   >
                     sanchai5651@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
-                  <ExternalLink className="w-5 h-5 text-[#4F6DFF]" />
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-[rgba(79,109,255,0.15)] flex items-center justify-center flex-shrink-0">
+                  <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-[#4F6DFF]" />
                 </div>
                 <div>
                   <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em] mb-1">Website</p>
@@ -132,7 +132,7 @@ export default function Contact() {
                     href="https://nabrio.com" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#F4F6FF] hover:text-[#4F6DFF] transition-colors"
+                    className="text-xs md:text-sm text-[#F4F6FF] hover:text-[#4F6DFF] transition-colors"
                   >
                     nabrio.com
                   </a>
@@ -141,8 +141,8 @@ export default function Contact() {
             </div>
 
             {/* Awards */}
-            <div className="pt-6 border-t border-[rgba(167,177,216,0.1)]">
-              <div className="flex items-center gap-2 mb-4">
+            <div className="pt-4 md:pt-6 border-t border-[rgba(167,177,216,0.1)]">
+              <div className="flex items-center gap-2 mb-3 md:mb-4">
                 <Award className="w-4 h-4 text-[#4F6DFF]" />
                 <p className="text-xs text-[#A7B1D8] uppercase tracking-[0.14em]">
                   Awards & Recognition
