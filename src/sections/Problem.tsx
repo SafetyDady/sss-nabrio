@@ -97,20 +97,20 @@ export default function Problem() {
         {/* Pain Point Cards - Separate Layout for Mobile/Desktop */}
         {isMobile ? (
           // Mobile Layout: Vertical Stack
-          <div className="space-y-4">
+          <div className="space-y-3">
             {painPoints.map((point, i) => (
               <div
                 key={point.title}
                 ref={el => { cardsRef.current[i] = el; }}
-                className="glass-card p-4 hover:border-[rgba(79,109,255,0.4)] transition-colors"
+                className="glass-card p-3 hover:border-[rgba(79,109,255,0.4)] transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-3">
-                  <point.icon className="w-5 h-5 text-[#4F6DFF]" />
+                <div className="w-8 h-8 rounded-lg bg-[rgba(79,109,255,0.15)] flex items-center justify-center mb-2">
+                  <point.icon className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
-                <h3 className="text-base font-semibold text-[#F4F6FF] mb-2">
+                <h3 className="text-sm font-semibold text-[#F4F6FF] mb-1">
                   {point.title}
                 </h3>
-                <p className="text-sm text-[#A7B1D8] leading-relaxed">
+                <p className="text-xs text-[#A7B1D8] leading-relaxed">
                   {point.description}
                 </p>
               </div>

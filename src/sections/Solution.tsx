@@ -73,11 +73,11 @@ export default function Solution() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Headline Block */}
-        <div ref={headlineRef} className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-4 md:mb-6">
+        <div ref={headlineRef} className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4F6FF] mb-3 md:mb-6">
             One platform. End-to-end.
           </h2>
-          <p className="text-base sm:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-[#A7B1D8] max-w-2xl mx-auto">
             Label, train, deploy, and automate—without stitching tools together.
           </p>
         </div>
@@ -85,20 +85,20 @@ export default function Solution() {
         {/* Flow Steps - Separate Layout for Mobile/Desktop */}
         {isMobile ? (
           // Mobile Layout: Vertical Stack
-          <div className="space-y-4">
+          <div className="space-y-3">
             {flowSteps.map((step, i) => (
               <div
                 key={step.label}
                 ref={el => { stepsRef.current[i] = el; }}
-                className="glass-card p-4 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
+                className="glass-card p-3 text-center hover:border-[rgba(79,109,255,0.4)] transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-3">
-                  <step.icon className="w-5 h-5 text-[#4F6DFF]" />
+                <div className="w-8 h-8 rounded-lg bg-[rgba(79,109,255,0.15)] border border-[rgba(79,109,255,0.3)] flex items-center justify-center mx-auto mb-2">
+                  <step.icon className="w-4 h-4 text-[#4F6DFF]" />
                 </div>
-                <h3 className="text-base font-semibold text-[#F4F6FF] mb-2">
+                <h3 className="text-sm font-semibold text-[#F4F6FF] mb-1">
                   {step.label}
                 </h3>
-                <p className="text-sm text-[#A7B1D8]">
+                <p className="text-xs text-[#A7B1D8]">
                   {step.description}
                 </p>
               </div>
