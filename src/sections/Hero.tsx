@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ArrowRight, Play, Camera, Cpu } from 'lucide-react';
+import { Camera, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
@@ -67,6 +67,10 @@ export default function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover"
+          onError={(e) => {
+            // Hide video and show fallback background
+            e.currentTarget.style.display = 'none';
+          }}
         >
           <source src="/assets/factory-dolly-shot.mp4" type="video/mp4" />
         </video>

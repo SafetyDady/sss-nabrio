@@ -64,6 +64,10 @@ export default function Reva() {
           loop
           playsInline
           className="w-full h-full object-cover"
+          onError={(e) => {
+            // Hide video and show fallback background
+            e.currentTarget.style.display = 'none';
+          }}
         >
           <source src="/assets/ai-detection-boxes.mp4" type="video/mp4" />
         </video>
