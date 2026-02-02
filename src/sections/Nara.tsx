@@ -71,7 +71,7 @@ export default function Nara() {
           <source src="/assets/robot-arm-picking.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 vignette-overlay" />
-        <div className="absolute inset-0 bg-[rgba(7,10,18,0.6)]" />
+        <div className="absolute inset-0 bg-[rgba(7,10,18,0.3)]" />
       </div>
 
       {/* Content */}
